@@ -1,0 +1,112 @@
+.portfolio-container {
+  padding-inline: clamp(1.25em, calc(0.25em + 3vw), 3em);
+  padding-block: 4em;
+  max-width: var(--max-content-width);
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+@media (min-width: 60rem) {
+  .portfolio-container {
+    padding-inline: clamp(3em, calc(1.5em + 4vw), 5em);
+  }
+}
+
+  
+  .portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  
+  .portfolio-title {
+    margin: 0;
+    font-size: 3rem;
+  }
+  
+  .portfolio-controls {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .carousel-control {
+    background-color: #2a2a2a;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: background-color 150ms, transform 150ms;
+  }
+  
+  .carousel-control:hover,
+  .carousel-control:active {
+    background-color: #353535;
+    transform: scale(1.1);
+  }
+  
+  .portfolio-carousel {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    gap: 20px; /* Spacing between items */
+    padding: 20px 0; /* Padding above and below the carousel */
+  }
+  
+  /* Chrome, Safari, Edge */
+  .portfolio-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  .portfolio-card {
+    flex: 0 0 auto;
+    width: 280px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #353535;
+    transition: transform 0.3s;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(0.8);
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.1);
+}
+  
+  .card-info {
+    position: absolute;
+    bottom: 0;
+    padding: 16px;
+    width: 100%;
+    background: linear-gradient(#0000 10%, #000e 50%, #000);
+    color: white;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+  
+  .card-info h3{
+    font-size: 1rem;
+  }
+
+  .card-info p{
+    font-size: 14px;
+    padding-top: 1rem;
+  }

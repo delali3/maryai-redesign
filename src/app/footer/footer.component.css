@@ -1,0 +1,125 @@
+.main-footer {
+    background-color: #000;
+    overflow: hidden;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .main-footer-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    opacity: 0.35;
+  }
+  
+  .main-footer-content {
+    max-width: var(--max-content-width);
+    margin-inline: auto;
+  }
+  
+  .collaborators-section {
+    padding-top: 3.5em;
+    margin-bottom: 10em;
+    background-color: #000a;
+  }
+  
+  .collaborators-section__heading {
+    font-size: clamp(2rem,calc(1rem + 2.75vw),2.75rem);
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .collaborators-section__content {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    padding-inline: 1em;
+    padding-block: 2em;
+    overflow: hidden;
+  }
+  
+  .collaborators-section__img {
+    height: 3.25em;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .collaborators-section__img--large {
+    height: 6.5em;
+  }
+  
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-inline: 1em;
+    margin-bottom: 5em;
+  }
+  
+  .address-links {
+    display: grid;
+    gap: 0.8125em;
+  }
+  
+  .address-links__link {
+    display: inline-block;
+    width: fit-content;
+    text-decoration: none;
+    color: currentColor;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 3em;
+  }
+  
+  .social-links__link {
+    display: inline-block;
+    color: currentColor;
+  
+    transition: color 150ms;
+  }
+  
+  .social-links__link:hover,
+  .social-links__link:focus-visible {
+    color: var(--clr-accent);
+  }
+  
+  :where(.social-links__link) .icon {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  
+  .copyright-text {
+    text-align: center;
+    padding-bottom: 2.5em;
+  }
+  
+  @media (min-width: 60rem) {
+    .collaborators {
+      gap: 5em;
+    }
+  
+    .contact-links {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding-inline: 5em;
+    }
+    
+    .copyright-text {
+      padding-inline: 5em;
+      text-align: left;
+    }
+  }
+  

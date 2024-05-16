@@ -1,0 +1,29 @@
+<!-- header.component.html -->
+<header class="main-header">
+  <div class="main-header-content">
+    <div class="logo">
+      <img src="assets/images/minohealth-logo.png" alt="Logo" />
+      <span>minoHealth AI Labs</span>
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul [class.active]="menuActive">
+          <li><a href="#focus" (click)="toggleMenu()">Focus</a></li>
+          <li><a href="#portfolio" (click)="toggleMenu()">Portfolio</a></li>
+          <li><a href="#about" (click)="toggleMenu()">About</a></li>
+          <li><a href="#contact" (click)="toggleMenu()">Contact</a></li>
+          <li><a href="#blog" (click)="toggleMenu()">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="theme-toggle" (click)="toggleTheme()">
+        <i
+          class="fas"
+          [ngClass]="currentTheme === 'light' ? 'fa-sun' : 'fa-moon'"
+        ></i>
+      </div>
+      <div class="menu-icon" (click)="toggleMenu()">
+        <i [class]="menuActive ? 'fas fa-times' : 'fas fa-bars'"></i>
+      </div>
+    </div>
+  </div>
+</header>

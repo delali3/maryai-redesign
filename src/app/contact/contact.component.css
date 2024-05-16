@@ -1,0 +1,35 @@
+.contact-section {
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  text-align: center;
+  margin-inline: clamp(1.25em, calc(0.25em + 3vw), 3em);
+  margin-block: 2em;
+  padding-inline: 2em;
+  padding-block: 1.5em;
+  border-radius: 1.25em;
+  background-color: var(--clr-bg-secondary);
+}
+
+@media (min-width: 60rem) {
+  .contact-section {
+    margin-inline: clamp(3em, calc(1.5em + 4vw), 5em);
+    background-color: #0000;
+  }
+}
+
+.contact-section__heading {
+  font-size: clamp(2rem,calc(1rem + 2.75vw),2.75rem);
+  font-weight: 600;
+  color: var(--clr-text-secondary);
+}
+
+.contact-section__text {
+  font-size: clamp(1rem, calc(0.75rem + 0.75vw), 1.125rem);
+}
+
+@media (min-width: 60rem) {
+  .contact-section__text {
+    font-size: clamp(1.125rem, calc(0.75rem + 0.75vw), 1.75rem);
+  }
+}

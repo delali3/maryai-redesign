@@ -1,0 +1,75 @@
+.focus-container{
+  
+  padding-inline: clamp(1.25em, calc(0.25em + 3vw), 3em);
+  padding-block: 4em;
+  max-width: var(--max-content-width);
+  margin-inline: auto;
+  overflow: hidden;
+}
+.focus {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+  margin: 1rem auto;
+  color: var(); /* Default text color set to white for all child elements */
+  overflow: hidden;
+}
+
+.focus h2 {
+  grid-column: 1 / -1; /* Span across all columns */
+  text-align: left; /* Centers the heading */
+  margin-top: 20px;
+  color: var(); /* Gives a distinctive color to the heading */
+  padding-bottom: 20px;
+  font-size: 3rem;
+}
+
+.focus-left-panel, .focus-right-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 20px; /* Uniform padding */
+}
+
+.focus-left-panel img {
+  width: 100%;
+  max-width: 500px; /* Limits the size of the image */
+  object-fit: contain; /* Ensures the image fits well within the container */
+}
+
+.focus-right-panel .focus-content {
+  text-align: left; /* Aligns text to the left */
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.focus-content h1{
+  font-size: 1.5rem;
+}
+.focus-content p{
+  margin-block: 1rem;
+}
+
+@media (max-width: 1028px) {
+  .focus {
+    grid-template-columns: 1fr; /* Stack the panels on smaller screens */
+  }
+  .focus-left-panel {
+    order: 2; /* Image appears after the text */
+  }
+  .focus-right-panel {
+    order: 1; /* Text appears before the image */
+  }
+}
+
+@media (max-width: 768px) {
+  .focus-left-panel, .focus-right-panel {
+    padding: 10px;
+  }
+  .focus h2 {
+    margin-top: 10px; /* Reduces space above heading on smaller screens */
+    padding-bottom: 10px;
+  }
+  .focus-right-panel .focus-content {
+    max-width: 100%; /* Allows text to use the full width on small screens */
+  }
+}

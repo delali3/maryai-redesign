@@ -1,0 +1,321 @@
+/* GLOBAL */
+/* @font-face {
+    font-family: MuseoSans;
+    src: url("./assets/fonts/MuseoSans/MuseoSans-100.otf");
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: MuseoSans;
+    src: url("./assets/fonts/MuseoSans/MuseoSans-100Italic.otf");
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: MuseoSans;
+    src: url("./assets/fonts/MuseoSans/MuseoSans-300.otf");
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: MuseoSans;
+    src: url("./assets/fonts/MuseoSans/MuseoSans-300Italic.otf");
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: MuseoSans;
+    src: url("./assets/fonts/MuseoSans/MuseoSans-500.otf");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: MuseoSans;
+    src: url("./assets/fonts/MuseoSans/MuseoSans-500Italic.otf");
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: MuseoSans;
+    src: url("./assets/fonts/MuseoSans/MuseoSans-700.otf");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: MuseoSans;
+    src: url("./assets/fonts/MuseoSans/MuseoSans-700Italic.otf");
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: MuseoSans;
+    src: url("./assets/fonts/MuseoSans/MuseoSans-900.otf");
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: MuseoSans;
+    src: url("./assets/fonts/MuseoSans/MuseoSans-900Italic.otf");
+    font-weight: 900;
+    font-style: italic;
+  } */
+  
+  /* ! Get actual font with all the needed sizes */
+  /* @font-face {
+    font-family: Museo;
+    src: url("./assets/fonts/Museo_300/Museo_300.otf");
+  }
+   */
+  @media (prefers-reduced-motion: no-preference) {
+    :focus-visible {
+      outline: 3px solid;
+      transition: outline-offset 150ms ease-out;
+    }
+    
+    :not(:active):focus-visible {
+      transition: outline-offset 50ms ease-out;
+    }
+  }
+  
+  :not(:active):focus-visible {
+    outline-offset: 0.15em;
+  }
+  
+  /* styles.scss */
+:root {
+  --clr-accent: #ff005d;
+  --clr-accent-dark: #c4004a;
+  --hsl-accent: 338 100% 50%;
+  
+  --ff-sans: MuseoSans, "Open sans", sans-serif;
+  --ff-serif: Museo, Georgia, sans-serif;
+
+  --max-content-width: 85em;
+
+  scroll-padding-top: var(--page-scroll-padding, 5em);
+  scrollbar-gutter: stable;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+:root:where([data-theme="light"]) {
+  color-scheme: light;
+  --clr-bg-primary: #faf5ea;
+  --hsl-bg-primary: 41 62% 95%;
+  --clr-bg-secondary: #ddd;
+  --hsl-bg-secondary: 0 0% 91%;
+  --clr-text-primary: #000;
+  --hsl-text-primary: 0 0% 0%;
+  --clr-text-secondary: #333;
+  --clr-text-tertiary: #999;
+}
+
+:root:where([data-theme="dark"]) {
+  color-scheme: dark;
+  --clr-bg-primary: #1b1b1b;
+  --hsl-bg-primary: 0 0% 11%;
+  --clr-bg-secondary: #2a2a2a;
+  --hsl-bg-secondary: 0 0% 16%;
+  --clr-text-primary: #fff;
+  --hsl-text-primary: 0 0% 100%;
+  --clr-text-secondary: #d2d2d2;
+  --clr-text-tertiary: #707070;
+}
+
+  *,
+  *::before,
+  *::after {
+    transition: color 50ms ease-out, background-color 150ms ease-out;
+  }
+  
+  /* UTILITY CLASSES */
+  .sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fly-in {
+    from {
+      transform: translateY(var(--fly-in-offset, 100%));
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes drop-out {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(var(--drop-out-offset, 100%));
+    }
+  }
+  
+  /* PAGE STYLES */
+  
+  body {
+    font-family: var(--ff-sans);
+    font-weight: 300;
+    color: var(--clr-text-primary);
+    background-color: var(--clr-bg-primary);
+  }
+  
+  .icon-btn {
+    background-color: #0000;
+    border: none;
+    aspect-ratio: 1;
+    padding: 0.25em;
+    
+    transition: background-color 150ms ease-out;
+  }
+  
+  .icon-btn:hover,
+  .icon-btn:focus-visible {
+    background-color: var(--clr-bg-secondary);
+  }
+  
+  .icon-btn:active {
+    background-color: hsl(var(--hsl-text-primary) / 0.2);
+    border: 1px solid hsl(var(--hsl-text-primary) / 0.25);
+    transition: 
+      background-color 50ms ease-out,
+      border 50ms;
+  }
+  
+  .icon-btn__icon {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .action-btn {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding-block: 0.9em;
+    border-radius: 0.625em;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--clr-accent);
+    outline-color: var(--clr-accent);
+  
+    transition: background-color 150ms ease-out;
+  }
+  
+  .action-btn:hover,
+  .action-btn:focus-visible {
+    background-color: var(--clr-accent-dark);
+  }
+  
+  @media (min-width: 60rem) {
+    .action-btn {
+      font-size: clamp(1.125rem, calc(0.625rem + 0.75vw), 1.5rem);
+    }
+  }
+  
+  @media (min-width: 30rem) {
+    .action-btn {
+      width: fit-content;
+      padding-inline: 1.4em;
+    }
+  }
+  
+  /* MAIN CONTENT */
+  .main-content {
+    padding-bottom: 5em;
+  }
+  
+  @media (min-width: 60rem) {
+    .main-content {
+      margin-inline: auto;
+    }
+  }
+  
+
+
+/* RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+  }
+  
+  html {
+    color-scheme: dark light;
+  }
+  
+  body, #root {
+    min-height: 100vh;
+  }
+  
+  img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  button {
+    border: none;
+    cursor: pointer;
+  }
+  
+/* 
+@media (min-width: 1028px) {
+    body {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media (min-width: 408px) {
+    body {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+} */

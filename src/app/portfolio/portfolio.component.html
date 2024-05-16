@@ -1,0 +1,50 @@
+<div class="portfolio-container">
+  <div class="portfolio-header">
+    <h2 class="portfolio-title">PORTFOLIO</h2>
+    <div class="portfolio-controls">
+      <button class="carousel-control left" (click)="scrollLeft()">
+        <svg
+          stroke="#fff"
+          fill="#fff"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          class="portfolio-section__carousel-control-icon"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+          ></path>
+        </svg>
+      </button>
+      <button class="carousel-control right" (click)="scrollRight()">
+        <svg
+          stroke="#fff"
+          fill="#fff"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          class="portfolio-section__carousel-control-icon"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="portfolio-carousel" #carousel>
+    <div class="portfolio-card" *ngFor="let item of items">
+      <img src="{{ item.imageUrl }}" alt="{{ item.title }}" />
+      <div class="card-info">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
