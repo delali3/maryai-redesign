@@ -67,6 +67,9 @@
 
 .info-section__sub-section-img-container {
   grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .info-section__sub-section-img {
@@ -126,7 +129,7 @@
   }
 }
 
-.fancy-list ol li::before {
+.fancy-list li::before {
   --_size: 2.5em;
   content: counter(list-counter);
   display: grid;

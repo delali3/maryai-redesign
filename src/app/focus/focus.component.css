@@ -49,7 +49,7 @@
   margin-block: 1rem;
 }
 
-@media (max-width: 1028px) {
+@media (max-width: 60rem) {
   .focus {
     grid-template-columns: 1fr; /* Stack the panels on smaller screens */
   }
