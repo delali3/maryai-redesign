@@ -4,7 +4,6 @@
   z-index: 1;
   top: 0;
   background-color: var(--clr-bg-primary);
-  background: red;
 }
 
 @supports (backdrop-filter: blur(0.5em)) {
@@ -54,6 +53,11 @@ nav ul {
   display: flex;
   gap: 20px;
   margin: 0;
+  background: #000;
+  background-color: hsl(var(--hsl-bg-primary) / 0.9);
+  text-align: center;
+  /* padding-block: 5em; */
+  
 }
 
 nav ul li {
@@ -135,12 +139,6 @@ nav ul li a:hover {
     display: flex;
     transform: translateY(0);
     opacity: 1;
-  }
-
-  nav ul li {
-    text-align: center;
-    padding: 15px 0;
-    border-bottom: 1px solid #333;
   }
 
   nav ul li a {

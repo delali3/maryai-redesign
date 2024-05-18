@@ -191,7 +191,7 @@
   /* PAGE STYLES */
   
   body {
-    font-family: var(--ff-sans);
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     color: var(--clr-text-primary);
     background-color: var(--clr-bg-primary);
