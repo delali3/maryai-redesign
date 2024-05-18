@@ -1,4 +1,5 @@
-.about, .container{
+.about,
+.container {
   padding-inline: clamp(1.25em, calc(0.25em + 3vw), 3em);
   padding-block: 4em;
   max-width: var(--max-content-width);
@@ -6,16 +7,29 @@
   overflow: hidden;
 }
 
-@media (min-width: 60rem) {
-.about {
-  padding-inline: clamp(3em, calc(1.5em + 4vw), 5em);
-}
+@media (max-width: 60rem) {
+  .about {
+    padding-inline: clamp(3em, calc(1.5em + 4vw), 5em);
+  }
+
+  .about,
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .about{
+    padding-inline: 1rem;
+  }
+  .about > h3{
+    font-size: 1rem;
+  }
 }
 
 .about h2 {
   text-align: left;
   margin-top: 20px;
-  color: white;
+  color: var(--clr-text-primary);
   padding-bottom: 20px;
   font-size: 3rem;
 }
@@ -36,7 +50,8 @@
 }
 
 
-.about-left-panel, .about-right-panel {
+.about-left-panel,
+.about-right-panel {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,8 +88,15 @@
 }
 
 .stat-section {
+  /* display: flex;
+  flex-direction: column; */
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  row-gap: 2rem;
+  text-align: center;
+  padding-block: 1rem;
 }
 
 .stat-title {
@@ -84,40 +106,47 @@
 .stat-value {
   font-size: 5rem;
   font-weight: 600;
-  margin-block: 2rem!important;
+  margin-block: 2rem !important;
 }
 
 .stat-country {
   font-size: 1.5rem;
 }
 
-@media (max-width: 1028px) {
+@media (max-width: 60rem) {
   .container {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
+
   .about-left-panel {
     order: 2;
   }
+
   .about-right-panel {
     order: 1;
   }
+
   .statistics {
-  
+
     grid-template-columns: 1fr;
   }
-  
+
 }
 
 @media (max-width: 768px) {
-  .about-left-panel, .about-right-panel {
+
+  .about-left-panel,
+  .about-right-panel {
     padding: 10px;
   }
+
   .container h2 {
     margin-top: 10px;
     padding-bottom: 10px;
   }
+
   .about-right-panel .about-content {
     max-width: 100%;
   }
