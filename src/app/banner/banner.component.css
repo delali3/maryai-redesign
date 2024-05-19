@@ -40,6 +40,10 @@
   .hero-section__img-container {
     max-width: none;
   }
+
+  .hero-section__img-container img{
+    width: auto;
+  }
 }
 
 .hero-section__content-section {
@@ -67,7 +71,8 @@
 }
 
 .hero-section__heading h2 {
-  font-size: clamp(2.25rem,calc(1rem + 3vw),3rem);
+  font-size: 1.5rem;
+  word-wrap: break-word;
   font-weight: 600;
 }
 
