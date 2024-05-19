@@ -41,7 +41,7 @@
     max-width: none;
   }
 
-  .hero-section__img-container img{
+  .hero-section__img-container img {
     width: auto;
   }
 }
@@ -82,7 +82,7 @@
 
 @media (min-width: 60rem) {
   .hero-section__heading h2 {
-    font-size: clamp(2.25rem,calc(1rem + 2.325vw),3.25rem);
+    font-size: clamp(2.25rem, calc(1rem + 2.325vw), 3.25rem);
   }
 
   .hero-section__heading p {
@@ -99,4 +99,69 @@
 
 .fda-section__banner {
   width: 100%;
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Applying initial state and animation to the image with delay */
+/* Animation keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromTop {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+
+
+.hero-section__heading h2 span,
+.hero-section__heading p {
+  opacity: 0; /* Initial state */
+  animation: fadeInFromTop 1s ease-out 1.8s forwards; /* 8s delay before the animation starts, forwards to keep final state */
+}
+
+
+/* Applying initial state and animation to the image with delay */
+.hero-section__img-container img {
+  opacity: 0; /* Initial state */
+  animation: slideIn 1s ease-out 1.6s forwards; /* 8s delay before the animation starts, forwards to keep final state */
+}
+.action-btn {
+  opacity: 0; /* Initial state */
+  animation: slideDown 1s ease-out 2s forwards; /* 8s delay before the animation starts, forwards to keep final state */
 }
