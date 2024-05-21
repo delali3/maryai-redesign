@@ -1,0 +1,20 @@
+<section>
+    <span>meet our</span>
+    <h2>Team</h2>
+    <p>Our team consists of passionate professionals committed to innovation and excellence. We work together to deliver outstanding results and create impactful solutions for our clients and partners.</p>
+    <span class="bg-watermark">team</span>
+    <div class="cards">
+      <div class="card" *ngFor="let member of teamMembers">
+        <img [src]="member.imageUrl" [alt]="member.name">
+        <div class="card-content">
+          <h3>{{ member.name }}</h3>
+          <p>{{ member.title }}</p>
+          <ul>
+            <li><a [href]="member.twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a [href]="member.linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section> 
+  

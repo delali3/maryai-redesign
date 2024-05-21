@@ -15,8 +15,8 @@
   
   /* styles.scss */
 :root {
-  --clr-accent: #ff005d;
-  --clr-accent-dark: #c4004a;
+  --clr-accent: #003e3d;
+  --clr-accent-dark: #002a29;
   --hsl-accent: 338 100% 50%;
   
   --ff-sans: MuseoSans, "Open sans", sans-serif;

@@ -1,11 +1,11 @@
-.focus-container{
-  
+.focus-container {
   padding-inline: clamp(1.25em, calc(0.25em + 3vw), 3em);
   padding-block: 4em;
   max-width: var(--max-content-width);
   margin-inline: auto;
   overflow: hidden;
 }
+
 .focus {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
@@ -23,11 +23,13 @@
   font-size: 3rem;
 }
 
-.focus-left-panel, .focus-right-panel {
+.focus-left-panel,
+.focus-right-panel {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-block: 20px; /* Uniform padding */
+  opacity: 0; /* Initial state */
 }
 
 .focus-left-panel img {
@@ -42,10 +44,11 @@
   margin-top: 2rem;
 }
 
-.focus-content h1{
+.focus-content h1 {
   font-size: 1.5rem;
 }
-.focus-content p{
+
+.focus-content p {
   margin-block: 1rem;
 }
 
@@ -62,7 +65,8 @@
 }
 
 @media (max-width: 768px) {
-  .focus-left-panel, .focus-right-panel {
+  .focus-left-panel,
+  .focus-right-panel {
     padding: 10px;
   }
   .focus h2 {
@@ -72,4 +76,36 @@
   .focus-right-panel .focus-content {
     max-width: 100%; /* Allows text to use the full width on small screens */
   }
+}
+
+/* Animation keyframes for left and right elements */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Applying animations when elements are in view */
+.focus-animate-left.in-view {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.focus-animate-right.in-view {
+  animation: slideInFromRight 1s ease-out forwards;
 }
