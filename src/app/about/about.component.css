@@ -26,7 +26,7 @@
   }
 
   .about h2{
-    font-size: 1.5rem;
+    font-size: clamp(1rem, calc(0.25em + 3vw), 1.5rem);
   }
 }
 
@@ -35,7 +35,7 @@
   margin-top: 20px;
   color: var(--clr-text-primary);
   padding-bottom: 20px;
-  font-size: 3rem;
+  font-size: clamp(2rem, calc(0.25em + 3vw), 3rem);
 }
 
 .about h3 {
@@ -92,8 +92,6 @@
 }
 
 .stat-section {
-  /* display: flex;
-  flex-direction: column; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -108,9 +106,8 @@
 }
 
 .stat-value {
-  font-size: 5rem;
+  font-size: clamp(3.5rem, calc(0.25em + 3vw), 5rem);
   font-weight: 600;
-  margin-block: 2rem !important;
 }
 
 .stat-country {
