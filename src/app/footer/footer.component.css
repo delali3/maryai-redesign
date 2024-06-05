@@ -95,7 +95,7 @@
     color: var(--clr-accent);
   }
   
-  :where(.social-links__link) .icon {
+  :where(.social-links__link) img {
     width: 2.5em;
     height: 2.5em;
   }

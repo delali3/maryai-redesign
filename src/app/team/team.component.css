@@ -33,7 +33,7 @@ a:hover {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1.5%;
   margin-top: 100px;
 }
@@ -59,7 +59,7 @@ a:hover {
   border: 1px dashed #ddd;
   background: var(--clr-bg-secondary);
   padding-top: 90px; /* Adjusted for avatar positioning */
-  min-height: 100px;
+  min-height: 200px;
   z-index: 9;
 }
 
