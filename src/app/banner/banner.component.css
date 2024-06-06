@@ -101,6 +101,35 @@
   width: 100%;
 }
 
+.static-video {
+  margin: 5%;
+}
+
+.video-wrapper {
+  max-height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: black;
+}
+
+.video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.fda-section video{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: 100px;
+}
+
 /* Animation keyframes */
 @keyframes slideIn {
   from {
@@ -191,11 +220,13 @@
   color: #fff;
   position: relative;
   z-index: 0;
+  max-width: var(--max-content-width);
+  margin: auto;
 }
 
 .collaborators-section {
   padding-top: 3.5em;
-  margin-bottom: 10em;
+  margin-bottom: 5em;
   background-color: #000a;
 }
 
@@ -210,13 +241,14 @@
   display: flex;
   gap: 2em;
   align-items: center;
+  justify-content: center;
   padding-inline: 1em;
   padding-block: 2em;
   overflow: hidden;
 }
 
 .collaborators-section__img {
-  height: 3.25em;
+  height: 6.25em;
   width: auto;
   object-fit: contain;
   object-position: center;
