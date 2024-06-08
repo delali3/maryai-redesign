@@ -17,7 +17,9 @@ a:hover {
 }
 
 .title{
-    font-size: clamp(2rem, 3rem + 1.6vw, 4rem);
+  font-size: clamp(2rem, calc(0.25em + 3vw), 3rem);
+  font-weight: 600;
+  word-wrap: break-word;
 }
 
 .container {
@@ -56,23 +58,23 @@ a:hover {
 
 .team-col-inner {
   position: relative;
-  border: 1px dashed #ddd;
-  background: var(--clr-bg-secondary);
-  padding-top: 90px; /* Adjusted for avatar positioning */
+  /* border: 1px dashed #ddd; */
+  /* background: var(--clr-bg-secondary); */
+  padding-top: 90px;
   min-height: 200px;
   z-index: 9;
 }
 
 .team-col {
   padding: 15px;
-  background: #fff;
+  /* background: #fff; */
   border-radius: 10px;
   position: relative;
   transition: transform 0.3s ease-in-out;
   margin-bottom: 5rem;
 }
 
-.team-col:hover {
+/* .team-col:hover {
   transform: translateY(-30px);
   box-shadow: 0px 3px 10px 3px rgba(170, 170, 173, 0.5);
 }
@@ -101,7 +103,7 @@ a:hover {
 
 .team-col:hover::before, .team-col:hover::after {
   width: 100%;
-}
+} */
 
 .member-name {
   margin-top: 20px; /* Adjusted for avatar spacing */

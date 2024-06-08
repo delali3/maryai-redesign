@@ -6,6 +6,7 @@
     color: #fff;
     position: relative;
     z-index: 0;
+    height: 250px;
   }
   
   .main-footer-bg-img {
@@ -26,8 +27,8 @@
   }
   
   .collaborators-section {
-    padding-top: 3.5em;
-    margin-bottom: 10em;
+    padding-top: .5rem;
+    margin-bottom: 1rem;
     background-color: #000a;
   }
   

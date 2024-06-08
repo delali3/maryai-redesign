@@ -26,7 +26,9 @@
   }
 
   .about h2{
-    font-size: clamp(1rem, calc(0.25em + 3vw), 1.5rem);
+    font-size: clamp(2rem, calc(0.25em + 3vw), 3rem);
+    font-weight: 600;
+    word-wrap: break-word;
   }
 }
 
@@ -36,6 +38,8 @@
   color: var(--clr-text-primary);
   padding-bottom: 20px;
   font-size: clamp(2rem, calc(0.25em + 3vw), 3rem);
+  font-weight: 600;
+  word-wrap: break-word;
 }
 
 .about h3 {
@@ -75,8 +79,10 @@
   font-size: 1rem;
 }
 
-.about-content h1 {
-  font-size: clamp(1.5rem, calc(0.75rem + 2.5vw), 1.75rem);
+.about-content h2 {
+  font-size: clamp(2rem, calc(0.25em + 3vw), 3rem);
+  font-weight: 500;
+  word-wrap: break-word;
 }
 
 .about-content p {
