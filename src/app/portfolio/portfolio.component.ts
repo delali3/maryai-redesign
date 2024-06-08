@@ -14,7 +14,7 @@ export class PortfolioComponent {
       description: "RESEARCH & DEVELOPMENT"
     },
     {
-      imageUrl: "assets/images/un-itu-thumbnail.jpg",
+      imageUrl: "assets/images/foundation-model-thumbnail.png",
       title: "UNITED NATIONS GLOBAL INITIATIVE ON AI FOR HEALTH (GI-AI4H)",
       description: "REGULATIONS & STANDARDS"
     },
@@ -24,7 +24,7 @@ export class PortfolioComponent {
       description: "PARTNERSHIP"
     },
     {
-      imageUrl: "assets/images/un-itu-thumbnail.jpg",
+      imageUrl: "assets/images/foundation-model-thumbnail.png",
       title: "UNITED NATIONS GLOBAL INITIATIVE ON AI FOR HEALTH (GI-AI4H)",
       description: "REGULATIONS & STANDARDS"
     },
@@ -34,7 +34,7 @@ export class PortfolioComponent {
       description: "PARTNERSHIP"
     },
     {
-      imageUrl: "assets/images/un-itu-thumbnail.jpg",
+      imageUrl: "assets/images/foundation-model-thumbnail.png",
       title: "UNITED NATIONS GLOBAL INITIATIVE ON AI FOR HEALTH (GI-AI4H)",
       description: "REGULATIONS & STANDARDS"
     },
@@ -44,7 +44,7 @@ export class PortfolioComponent {
       description: "PARTNERSHIP"
     },
     {
-      imageUrl: "assets/images/un-itu-thumbnail.jpg",
+      imageUrl: "assets/images/foundation-model-thumbnail.png",
       title: "UNITED NATIONS GLOBAL INITIATIVE ON AI FOR HEALTH (GI-AI4H)",
       description: "REGULATIONS & STANDARDS"
     },
