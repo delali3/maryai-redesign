@@ -305,7 +305,7 @@
   padding-bottom: 2.5em;
 }
 
-@media (min-width: 60rem) {
+@media (max-width: 60rem) {
   .collaborators {
     gap: 5em;
   }
@@ -320,6 +320,10 @@
   .copyright-text {
     padding-inline: 5em;
     text-align: left;
+  }
+  .collaborators-section__content{
+    display: flex;
+    flex-direction: column;
   }
 }
 

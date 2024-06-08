@@ -8,7 +8,6 @@ import { FocusComponent } from './focus/focus.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { BlogComponent } from './blog/blog.component';
 import { BannerComponent } from './banner/banner.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { PortfolioModalComponent } from './portfolio-modal/portfolio-modal.component';
@@ -24,7 +23,6 @@ import { TeamComponent } from './team/team.component';
     PortfolioComponent,
     AboutComponent,
     ContactComponent,
-    BlogComponent,
     BannerComponent,
     HowItWorksComponent,
     PortfolioModalComponent,
