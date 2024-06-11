@@ -22,7 +22,9 @@
   
   .portfolio-title {
     margin: 0;
-    font-size: clamp(1.25em, calc(0.25em + 3vw), 3em);
+    font-size: clamp(2em, calc(0.25em + 3vw), 3em);
+    font-weight: 600;
+    word-wrap: break-word;
   }
   
   .portfolio-controls {
@@ -33,7 +35,7 @@
   .carousel-control {
     background-color: #2a2a2a;
     border: none;
-    color: var(--clr-primary);
+    color: var(--clr-text-primary);
     font-size: 1em;
     cursor: pointer;
     width: 40px;
@@ -97,7 +99,7 @@
     padding: 16px;
     width: 100%;
     background: linear-gradient(#0000 10%, #000e 50%, #000);
-    color: var(--clr-primary);
+    color: #fff;
     text-align: left;
     line-height: 1.5rem;
   }
