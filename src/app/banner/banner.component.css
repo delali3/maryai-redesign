@@ -198,20 +198,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .main-collaborators-section{
   background-color: #000;
   overflow: hidden;
@@ -306,6 +292,10 @@
 }
 
 @media (max-width: 60rem) {
+  .collaborators-section__content{
+    display: flex;
+    flex-direction: column;
+  }
   .collaborators {
     gap: 5em;
   }
@@ -320,10 +310,6 @@
   .copyright-text {
     padding-inline: 5em;
     text-align: left;
-  }
-  .collaborators-section__content{
-    display: flex;
-    flex-direction: column;
   }
 }
 
