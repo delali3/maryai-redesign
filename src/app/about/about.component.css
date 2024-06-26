@@ -94,6 +94,11 @@ h2 {
   text-align: center;
 }
 
+.border{
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
 .stat-section {
   display: flex;
   flex-wrap: wrap;
