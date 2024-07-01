@@ -1,6 +1,6 @@
 .hero-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 15fr;
   grid-template-areas: 
     "img-section img-section"
     "content content";
@@ -30,10 +30,12 @@
   grid-area: img-section;
   display: grid;
   place-content: center;
+  
 }
 
 .hero-section__img-container {
   max-width: max(25em, 60vw);
+  display: flex;
 }
 
 @media (min-width: 60rem) {
@@ -83,7 +85,7 @@
 
 @media (min-width: 60rem) {
   .hero-section__heading h2 {
-    font-size: clamp(2.25rem, calc(1rem + 2.325vw), 3.25rem);
+    /* font-size: clamp(2.25rem, calc(1rem + 2.325vw), 3.25rem); */
   }
 
   .hero-section__heading p {
@@ -218,7 +220,7 @@
 }
 
 .collaborators-section__heading {
-  font-size: clamp(2rem,calc(1rem + 2.75vw),2.75rem);
+  /* font-size: clamp(2rem,calc(1rem + 2.75vw),2.75rem); */
   font-weight: 600;
   color: #fff;
   text-align: center;
