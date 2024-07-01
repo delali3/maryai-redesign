@@ -42,7 +42,8 @@
   }
 
   .hero-section__img-container img {
-    width: auto;
+    width: max(20em, 30em);
+    margin-bottom: 1rem;
   }
 }
 

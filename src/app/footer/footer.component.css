@@ -6,8 +6,23 @@
     color: #fff;
     position: relative;
     z-index: 0;
-    height: 250px;
+    height: 180px;
   }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    animation: fadeInSlideUp 1s ease forwards;
+    opacity: 1;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    filter: invert(1);
+  }
+  
   
   .main-footer-bg-img {
     position: absolute;
@@ -27,8 +42,8 @@
   }
   
   .collaborators-section {
-    padding-top: 2.5rem;
-    margin-bottom: 1rem;
+    padding-top: .5rem;
+    margin-bottom: .5rem;
     background-color: #000a;
   }
   
@@ -49,14 +64,14 @@
   }
   
   .collaborators-section__img {
-    height: 3.25em;
+    height: 2.25em;
     width: auto;
     object-fit: contain;
     object-position: center;
   }
   
   .collaborators-section__img--large {
-    height: 6.5em;
+    height: 4.5em;
   }
   
   .contact-links {
