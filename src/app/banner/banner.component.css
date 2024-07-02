@@ -1,18 +1,13 @@
 .hero-section {
-  display: grid;
-  grid-template-columns: 2fr 15fr;
-  grid-template-areas: 
-    "img-section img-section"
-    "content content";
-  gap: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   align-content: center;
-  padding-inline: clamp(1.25em, calc(0.25em + 3vw), 3em);
+  flex-direction: column-reverse;
   padding-block: 2em;
   max-width: var(--max-content-width);
-  margin-inline: auto;
+  margin: auto;
   overflow-x: hidden;
-  --base-height: 45em;
-  min-height: min(calc(100vh - var(--page-scroll-padding, 6em)), var(--base-height));
 }
 
 @media (min-width: 60rem) {
@@ -34,7 +29,7 @@
 }
 
 .hero-section__img-container {
-  max-width: max(25em, 60vw);
+  max-width: max(25em, var(--max-content-width));
   display: flex;
 }
 
@@ -44,9 +39,11 @@
   }
 
   .hero-section__img-container img {
-    width: max(20em, 15em);
+    width: max(15em, 40em);
     margin-bottom: 1rem;
+    margin-left: 10px;
   }
+
 }
 
 .hero-section__content-section {
@@ -55,28 +52,36 @@
 
 .hero-section__content {
   height: 100%;
-  display: grid;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-items: center;
+  width: var(--max-content-width);
   text-align: center;
-  gap: 1.75em;
-  max-width: 72ch;
-  margin-inline: auto;
+  height: max-content;
+  padding-bottom: 5rem;
 }
 
 @media (min-width: 60rem) {
   .hero-section__content {
-    max-width: min(calc(52ch + 5vw), 100%);
-    text-align: left;
-    justify-items: start;
+    text-align: center;
     margin-left: 0;
+    max-width: var(--max-content-width);
+  }
+}
+
+@media (max-width: 59rem){
+  .hero-section__img-container {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .hero-section__heading h2 {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, calc(0.75rem + 0.75vw), 1.5rem);
   word-wrap: break-word;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .hero-section__heading p {
@@ -198,54 +203,6 @@
   animation: slideDown 1s ease-out 2s forwards; /* 8s delay before the animation starts, forwards to keep final state */
 }
 
-
-
-
-.main-collaborators-section{
-  background-color: #000;
-  overflow: hidden;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-  position: relative;
-  z-index: 0;
-  max-width: var(--max-content-width);
-  margin: auto;
-}
-
-.collaborators-section {
-  padding-top: 3.5em;
-  margin-bottom: 5em;
-  background-color: #000a;
-}
-
-.collaborators-section__heading {
-  font-size: clamp(2rem,calc(1rem + 2.75vw),2.75rem);
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-}
-
-.collaborators-section__content {
-  display: flex;
-  gap: 2em;
-  align-items: center;
-  justify-content: center;
-  padding-inline: 1em;
-  padding-block: 2em;
-  overflow: hidden;
-}
-
-.collaborators-section__img {
-  height: 6.25em;
-  width: auto;
-  object-fit: contain;
-  object-position: center;
-}
-
-.collaborators-section__img--large {
-  height: 6.5em;
-}
 
 .contact-links {
   display: flex;

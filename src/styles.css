@@ -173,7 +173,7 @@
     }
   }
   
-  @media (min-width: 30rem) {
+  @media (min-width: 20rem) {
     .action-btn {
       width: fit-content;
       padding-inline: 1.4em;
