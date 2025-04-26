@@ -1,3 +1,115 @@
+<style>
+  .portfolio-carousel {
+    display: flex;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    gap: 20px;
+    padding: 20px 0;
+}
+.portfolio-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.portfolio-card {
+    flex: 0 0 auto;
+    width: 280px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #353535;
+    transition: transform 0.3s;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(0.8);
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    padding: 16px;
+    width: 100%;
+    background: linear-gradient(#0000 10%, #000e 50%, #000);
+    color: #fff;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+.card-info h3 {
+    font-size: 1rem;
+}
+
+.card-info p {
+    font-size: 14px;
+    padding-top: 1rem;
+}
+
+.video-container {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    max-width: 100%;
+    margin-inline: 5%;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.static-video {
+    margin: 5%;
+}
+
+.contact-section {
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    text-align: center;
+    margin-inline: clamp(1.25em, calc(0.25em + 3vw), 3em);
+    margin-block: 2em;
+    padding-inline: 2em;
+    padding-block: 1.5em;
+    border-radius: 1.25em;
+    background-color: var(--clr-bg-secondary);
+}
+
+@media (min-width: 60rem) {
+    .contact-section {
+        margin-inline: clamp(3em, calc(1.5em + 4vw), 5em);
+        background-color: #0000;
+    }
+}
+
+.contact-section__heading {
+    font-size: clamp(2rem, calc(1rem + 2.75vw), 2.75rem);
+    font-weight: 600;
+    color: var(--clr-text-secondary);
+}
+
+.contact-section__text {
+    font-size: clamp(1rem, calc(0.75rem + 0.75vw), 1.125rem);
+}
+@media (min-width: 60rem) {
+    .contact-section__text {
+        font-size: clamp(1.125rem, calc(0.75rem + 0.75vw), 1.75rem);
+    }
+}
+</style>
 <section>
     <div class="video-container">
       <video controls autoplay="true" muted loop>
