@@ -1,0 +1,134 @@
+<section>
+    <div class="video-container">
+      <video controls autoplay="true" muted loop>
+        <source
+          src="https://firebasestorage.googleapis.com/v0/b/ekke-eb80e.appspot.com/o/file.mp4?alt=media&token=1eaf85c7-f49d-4eda-9a6d-7675245f2d94"
+          type="video/mp4"
+        />
+        <source
+          src="https://firebasestorage.googleapis.com/v0/b/ekke-eb80e.appspot.com/o/file%20(1).mp4?alt=media&token=7522241c-db12-44a5-bb18-e14c55a33264"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <section class="static-video">
+      <div class="video-wrapper"></div>
+    </section>
+  </section>
+
+  
+<section>
+    <div class="main-collaborators-section">
+        <!-- Collaborators section -->
+        <div class="collaborators-section">
+          <h2 class="collaborators-section__heading" #headingRef>COLLABORATORS</h2>
+          <div class="collaborators-section__content" #collaboratorsRef>
+            <!-- Logos are listed here, update paths as necessary -->
+            <img
+              src="assets/images/logos/john-dickey-center.jpg"
+              alt="Bill and Melinda Gates Foundation"
+              class="collaborators-section__img"
+            />
+            <img
+              src="assets/images/logos/hassanpour.png"
+              alt="Meta AI"
+              class="collaborators-section__img"
+            />
+          </div>
+        </div>
+      </div>
+</section>
+
+
+<div class="hero-section">
+    <div class="hero-section__img-section">
+      <div class="hero-section__img-container">
+        <img src="assets/images/hero-section.jpeg" alt="Mary Health" class="hero-section__img"/>
+      </div>
+    </div>
+    <div class="image-center-container">
+      <div class="image-center">
+        <img src="assets/images/maryai-hero-image.png" alt="Mary Health" class="hero-section__img"/>
+      </div>
+    </div>
+    <div class="hero-section__content-section">
+      <div class="hero-section__content">
+        <div class="hero-section__heading">
+          <h2>
+            <span>ENHANCING </span>
+            <span>HEALTHCARE </span>
+            <span>ACCESSIBILITY</span>
+          </h2>
+        </div>
+        <a href="#" target="_blank" rel="noreferrer" class="action-btn">Visit MaryAI's IDHP</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-container">
+    <div class="portfolio-header">
+      <h2 class="portfolio-title">Media</h2>
+      <div class="portfolio-controls">
+        <button class="carousel-control left" (click)="scrollLeft()">
+          <svg
+            stroke="#fff"
+            fill="#fff"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            class="portfolio-section__carousel-control-icon"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            ></path>
+          </svg>
+        </button>
+        <button class="carousel-control right" (click)="scrollRight()">
+          <svg
+            stroke="#fff"
+            fill="#fff"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            class="portfolio-section__carousel-control-icon"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="portfolio-carousel" #carousel>
+      <div class="portfolio-card" *ngFor="let item of items">
+        <img src="{{ item.imageUrl }}" alt="{{ item.title }}" />
+        <a href="{{ item.link }}" target="_blank">
+          <div class="card-info">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <section id="contact" class="contact-section">
+    <h2>
+      CONTACT US
+    </h2>
+    <p style="max-width: 750px;">
+      Hospitals, healthcare non-profits, and public health organizations can use our Micro-clinics to reach people in remote and underserved areas. If you want to expand your services to these places, please contact us.
+    </p>
+    <br>
+    <br>
+    <a href="mailto:davisdfelix@gmail.com" class="action-btn">Send us a message</a>
+    <br>
+  </section>
+  

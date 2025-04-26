@@ -13,6 +13,8 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { PortfolioModalComponent } from './portfolio-modal/portfolio-modal.component';
 import { FooterComponent } from './footer/footer.component';
 import { TeamComponent } from './team/team.component';
+import { HomeComponent } from './home/home.component';
+import { ImpactComponent } from './impact/impact.component';
 // import { VisibleDirective } from './how-it-works/visible.directive'; // adjust the path as necessary
 
 @NgModule({
@@ -27,7 +29,9 @@ import { TeamComponent } from './team/team.component';
     HowItWorksComponent,
     PortfolioModalComponent,
     FooterComponent,
-    TeamComponent
+    TeamComponent,
+    HomeComponent,
+    ImpactComponent
   ],
   imports: [
     BrowserModule,
