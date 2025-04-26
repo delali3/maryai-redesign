@@ -1,4 +1,3 @@
-@import url('./impact.css');
 
 .portfolio-container {
     padding-inline: clamp(1.25em, calc(0.25em + 3vw), 3em);
